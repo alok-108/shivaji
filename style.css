@@ -1,0 +1,108 @@
+:root {
+  --bg: #1e1e2f;
+  --card: #2c2c3e;
+  --text: #f1f1f1;
+  --accent: #ffc857;
+  --table-bg: #3a3a52;
+  --border: #444;
+  --font-header: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #111;
+  border-bottom: 2px solid var(--accent);
+}
+
+h1 {
+  font-family: var(--font-header);
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: var(--card);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #0004;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-header);
+  color: var(--accent);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--table-bg);
+}
+
+th, td {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  background-color: #222;
+  color: var(--accent);
+  text-align: left;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #111;
+  border-top: 1px solid var(--border);
+}
+
+/* Collapsible Sections */
+.collapsible .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.collapsible.active .content {
+  max-height: 500px; /* can adjust as needed */
+  transition: max-height 0.5s ease-in;
+}
+
+.collapsible:hover {
+  cursor: pointer;
+}
